@@ -5,5 +5,6 @@ import BotSpecs from './component/botSpecs';
 import SortBar from './component/sortBar';
 
 const App = () => {
-  const [bots, setBots] = useState([]);
+  const [bots, setBots] = useState([]);// state to store list of bots
+  const [army, setArmy] = useState([]);
  
