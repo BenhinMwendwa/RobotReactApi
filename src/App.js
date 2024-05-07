@@ -15,5 +15,14 @@ const App = () => {
         return a[criteria] - b[criteria];
       });
   
-  
+      setBots(sortedBots);
+    };
+    const handleEnlist = (bot) => {
+    // Add the bot to the army state
+    setArmy([...army, bot]);
+  };
+  const handleRelease = (bot) => {
+    // Filter out the released bot from the army state
+    const updatedArmy = army.filter(b => b.id !== bot.id);
+    setArmy(updatedArmy);};
  
