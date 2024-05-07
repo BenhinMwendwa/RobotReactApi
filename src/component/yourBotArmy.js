@@ -1,4 +1,5 @@
 import React from 'react'
+import BotData from './botData'
 
 const yourBotArmy = (enlistedBots,releaseBot) => {//pass props
 
