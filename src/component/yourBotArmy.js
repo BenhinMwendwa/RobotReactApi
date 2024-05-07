@@ -1,24 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-const YourBotArmy = ({ army, onRelease }) => {
-  const handleRelease = (bot) => {
-    onRelease(bot);
-  };
+const yourBotArmy = (enlistedBots,releaseBot) => {//pass props
 
   return (
-    <div>
-      <h2>Your Bot Army</h2>
-      <div className="army-list">
-        {army.map(bot => (
-          <div key={bot.id} className="bot-card">
-            <img src={bot.avatar_url} alt={bot.name} />
-            <h3>{bot.name}</h3>
-            <button onClick={() => handleRelease(bot)}>Release</button>
-          </div>
-        ))}
-      </div>
+    <div className='bot-army'>
+        <h2>Your BOT Army</h2>
+      
     </div>
-  );
-};
+  )
+}
 
-export default YourBotArmy;
+export default yourBotArmy
