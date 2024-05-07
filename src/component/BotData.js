@@ -1,16 +1,37 @@
+
 import React from "react";
-const BotData=({bot,onRemove})=>{
-    const handleRelease=()=>{// call the onRemove function
-       
-        onRemove(bot.id)
-    }
-    return(
-        <div className='bot-data'>
-            <h3>name :{bot.name}</h3>
-            <p>type :{bot.type}</p>
-            <p>defense :{bot.defense}</p>
-            <p>health:{bot.health}</p>
-            <button onClick={handleRelease}>Release</button>
-        </div>
-    )}
-    export default BotData;
+
+function BotData({ bot, onAdd, onRelease }) {
+
+    const handleAdd = () => {
+
+        console.log('Bot added to army');
+      };
+    
+      // Define function to handle bot release
+      const handleRelease = () => {
+    
+        console.log('Bot released');
+      };
+    
+  return (
+    <div className="bot-card">
+      <img src={bot.avatar_url} alt={bot.name} className="bot-image" />
+      <h3 className="bot-name">{bot.name}</h3>
+      <p className="bot-description">Class: {bot.bot_class}</p>
+      <p className="bot-description">Health: {bot.health}</p>
+      <p className="bot-description">Damage: {bot.damage}</p>
+      <p className="bot-description">Armor: {bot.armor}</p>
+      
+      <div className="button-container">
+
+
+        <button onClick={handleAdd}>Add to Army</button>
+    
+      <button onClick={handleRelease}>Release</button>
+      </div>
+    </div>
+  );
+}
+
+export default BotData

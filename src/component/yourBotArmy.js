@@ -1,7 +1,7 @@
-import React from 'react'
-import BotData from './botData'
+import React from 'react';
+import BotData from './BotData'; 
 
-const yourBotArmy = (enlistedBots,releaseBot) => {//pass props
+const YourBotArmy = ({ enlistedBots, releaseBot }) => { //  object destructuring for props
 
   return (
     <div className='bot-army'>
@@ -15,6 +15,4 @@ const yourBotArmy = (enlistedBots,releaseBot) => {//pass props
   );
 }
     
-
-
-export default yourBotArmy
+export default YourBotArmy;
