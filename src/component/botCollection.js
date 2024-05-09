@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
+import BotCard from "./BotCard";
 
-const BotCollection = ({ bots, onBotClick, onEnlist }) => {
+
+function BotCollection(props) {
+  // Your code here
+  const bots = props.bots.map((bot) => {
+    return <BotCard key={bot.id} bot={bot} botFunction={props.botFunction}/>
+  })
+
   return (
-    <div>
-      <h2>Bot Collection</h2>
-      <div className="bot-collection">
-        {bots.map(bot => (
-          <div key={bot.id} className="bot-card" onClick={() => onBotClick(bot)}>
-            <img src={bot.avatar_url} alt={bot.name} />
-            <h3>{bot.name}</h3>
-            <p>Class: {bot.bot_class}</p>
-            <button onClick={() => onEnlist(bot)}>Enlist</button>
-          </div>
-        ))}
+    <div className="ui four column grid">
+      <div className="row">
+        
+        {bots}
       </div>
     </div>
   );
-};
+}
 
 export default BotCollection;

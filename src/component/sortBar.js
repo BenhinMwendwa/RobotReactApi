@@ -1,16 +1,15 @@
-import React from "react";
+
+import React from 'react';
+//sort bar
 const SortBar = ({ onSort }) => {
-    const handleSort = (criteria) => {
-      // Call the onSort function with the selected sorting criteria
-      onSort(criteria);
-    };
-    return (
-      <div className="sort-bar">
-        <h3>Sort by:</h3>
-        <button onClick={() => handleSort('health')}>Health</button>
-        <button onClick={() => handleSort('damage')}>Damage</button>
-        <button onClick={() => handleSort('armor')}>Armor</button>
-      </div>
-    );
-  }
-  export default SortBar;
+  return (
+    <div className="sort-bar">
+      <button onClick={() => onSort('health')}>Sort by Health</button>
+      <button onClick={() => onSort('damage')}>Sort by Damage</button>
+      <button onClick={() => onSort('armor')}>Sort by Armor</button>
+    </div>
+  );
+};
+//exporting sortbar
+
+export default SortBar;
